@@ -43,19 +43,19 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.1" % "test"
 fork := true
 
 // Your username to login to Databricks Cloud
-dbcUsername := sys.env.getOrElse("DBC_USERNAME", sys.error("Please set DBC_USERNAME"))
+//dbcUsername := sys.env.getOrElse("DBC_USERNAME", sys.error("Please set DBC_USERNAME"))
 
 // Your password (Can be set as an environment variable)
-dbcPassword := sys.env.getOrElse("DBC_PASSWORD", sys.error("Please set DBC_PASSWORD"))
+//dbcPassword := sys.env.getOrElse("DBC_PASSWORD", sys.error("Please set DBC_PASSWORD"))
 
 // The URL to the Databricks Cloud DB Api. Don't forget to set the port number to 34563!
-dbcApiUrl := sys.env.getOrElse ("DBC_URL", sys.error("Please set DBC_URL"))
+//dbcApiUrl := sys.env.getOrElse ("DBC_URL", sys.error("Please set DBC_URL"))
 
 // Add any clusters that you would like to deploy your work to. e.g. "My Cluster"
 // or run dbcExecuteCommand
-dbcClusters += sys.env.getOrElse("DBC_USERNAME", sys.error("Please set DBC_USERNAME"))
+//dbcClusters += sys.env.getOrElse("DBC_USERNAME", sys.error("Please set DBC_USERNAME"))
 
-dbcLibraryPath := s"/Users/${sys.env.getOrElse("DBC_USERNAME", sys.error("Please set DBC_USERNAME"))}/lib"
+//dbcLibraryPath := s"/Users/${sys.env.getOrElse("DBC_USERNAME", sys.error("Please set DBC_USERNAME"))}/lib"
 
 val runBenchmark = inputKey[Unit]("runs a benchmark")
 
